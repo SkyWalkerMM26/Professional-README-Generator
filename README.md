@@ -10,7 +10,8 @@ INPUT
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributions](#contribution-guidelines)
+- [Contributions](#contributing)
+- [Tests](#tests)
 - [Questions](#questions)
 
 ## Installation
@@ -21,7 +22,11 @@ INPUT
 
 INPUT
 
-## Contribution Guidelines
+## Contributing
+
+INPUT
+
+## Tests
 
 INPUT
 
