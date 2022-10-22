@@ -2,9 +2,50 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = [
+    {
+        type: 'input',
+        name: 'name',
+        message: 'What is your GitHub Username?',
+      },
+      {
+        type: 'input',
+        name: 'email',
+        message: 'what is your email address?',
+      },
+      {
+        type: 'input',
+        name: 'name',
+        message: "what is your project's name?",
+      },
+      {
+        type: 'input',
+        name: 'description',
+        message: 'Please write a short description of your project?',
+      },
+      {
+        type: 'input',
+        name: 'license',
+        message: 'What kind of license should your project have?',
+      },   
+      {
+        type: 'input',
+        name: 'dependencies',
+        message: 'what command should be run to install dependencies?',
+      },   
+      {
+        type: 'input',
+        name: 'test',
+        message: 'What command should be run to run tests?',
+      },   
+      {
+        type: 'input',
+        name: 'repo',
+        message: 'What does the user need to know about using the repo?',
+      },  
+];
+
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
