@@ -21,6 +21,11 @@ As a developer, I want to quickly generate a professional README to save more ti
 
 ## Usage
 
+Here is a video of how it works.
+
+![Untitled_ Oct 22, 2022 12_06 AM](https://user-images.githubusercontent.com/113512061/197325759-e6635eb3-88de-40e7-bb07-1b4602fdfb33.gif)
+
+
 ## Tests
 
 Open the index.js file in terminal and enter in 'node index.js'.
