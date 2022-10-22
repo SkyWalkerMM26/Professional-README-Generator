@@ -4,7 +4,7 @@
   ![License: MIT](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
 
   ## Description
-  As a developer, I want to quickly generate a readme to save more time for my project.
+  As a developer, I want to quickly generate a readme to save more time for my projects.
 
   ## Table of Contents 
   - [Installation](#installation)
