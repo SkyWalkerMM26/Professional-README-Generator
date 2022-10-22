@@ -3,43 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // TODO: Create an array of questions for user input
-const questions = (answers) =>
-    `# Project Title
-
-    <img src="https://img.shields.io/badge/LICENSE-${answers.license}-COLOR.svg?logo=LOGO">
-    ## Description
-    
-    ${answers.description}
-    
-    ## Table of Contents (Optional)
-    
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Contributions](#contributing)
-    - [Tests](#tests)
-    - [Questions](#questions)
-    
-    ## Installation
-    
-    ${answers.installation}
-    
-    ## Usage
-    
-    ${answers.input}
-    
-    ## Contributing
-    
-    ${answers.dependecies}
-    
-    ## Tests
-    
-    ${answers.tests}
-    
-    ## Questions
-    If you have any questions, open an issue or contact me directly at ${answers.email}. You can find more of my work at ${answers.gitHub}.`;
-
-    inquirer
-        .createPromptModule([
+const questions = [
     {
         type: 'input',
         name: 'name',
@@ -79,19 +43,26 @@ const questions = (answers) =>
         type: 'input',
         name: 'repo',
         message: 'What does the user need to know about using the repo?',
-      },  
-    ])
-    .then((answers) => {
-    const data = questions(answers);
+    },  
+];
 
-    fs.writeFile("Generate ReadMe", data, (err) => 
-        err ? console.log(err) : console.log('Generating README...')
-    );
-});
 
+function writeToFile(filename, data){
+    fs.writeFile("Generate-ReadMe.md", data, (err) => {
+    err ? console.log(err) : console.log('Generating README...')});
+
+    const data =
+    ``
+};
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.createPromptModule(questions)
+    .then(function (userInput){
+        console.log(userInput)
+        writeToFile()
+    })
+}
 
 // Function call to initialize app
 init();
