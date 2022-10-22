@@ -21,7 +21,7 @@ As a developer, I want to quickly generate a professional README to save more ti
 
 ## Usage
 
-Here is a video of how it works.
+Click on the video to see how it works.
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/n6DXvKFF7Ow/0.jpg)](https://www.youtube.com/watch?v=n6DXvKFF7Ow)
 
