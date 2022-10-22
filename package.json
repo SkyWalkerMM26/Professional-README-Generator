@@ -1,0 +1,20 @@
+{
+  "name": "professional-readme-generator",
+  "version": "1.0.0",
+  "description": "<img src=\"https://img.shields.io/badge/LICENSE-INPUT-COLOR.svg?logo=LOGO\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkyWalkerMM26/Professional-README-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SkyWalkerMM26/Professional-README-Generator/issues"
+  },
+  "homepage": "https://github.com/SkyWalkerMM26/Professional-README-Generator#readme"
+}

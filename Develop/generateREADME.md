@@ -1,12 +1,12 @@
 
-  # Prof readme generator
+  # Professional ReadMe Generator
 
-  ## [GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg) 
+  ![License: MIT](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
 
   ## Description
-  test
+  Test
 
-  ## Table of Contents
+  ## Table of Contents 
   - [Installation](#installation)
   - [Usage](#usage)
   - [License](#license)
@@ -15,7 +15,7 @@
   - [Questions](#questions)
 
   ## Installation
-  test
+  Test
 
   ## Usage
   Provide instructions and examples for use. Include screenshots as needed.
@@ -27,4 +27,4 @@
   test
 
   ## Questions
-  If you have any questions, open an issue or contact me directly at myia_moua26@yahoo.com. You can find more of my work at skywalkermm26.
+  If you have any questions, open an issue or contact me directly at myia_moua26@yahoo.com. You can find more of my work at https://github.com/SkyWalkerMM26.

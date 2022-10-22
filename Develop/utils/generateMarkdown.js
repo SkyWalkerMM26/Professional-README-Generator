@@ -6,8 +6,9 @@ const index = require('../index.js');
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license == "mit" || "MIT"){
-    return "[GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)"
-  } return "";
+    return " ![License: MIT](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)"
+  }else{
+    return "";
 }
 
 // TODO: Create a function that returns the license link
@@ -27,20 +28,22 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if (license !== "none"){
     return `\n- [License](#license)\n`;
-    } return "";
+    }else{
+    return "";
   }
+}}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answer) {
   return `
   # ${answer.title}
 
-  ## ${renderLicenseBadge(answer.license)} 
+ ${renderLicenseBadge(answer.license)}
 
   ## Description
   ${answer.description}
 
-  ## Table of Contents (Optional)
+  ## Table of Contents 
   - [Installation](#installation)
   - [Usage](#usage)
   - [License](#license)
@@ -61,7 +64,7 @@ function generateMarkdown(answer) {
   ${answer.test}
 
   ## Questions
-  If you have any questions, open an issue or contact me directly at ${answer.email}. You can find more of my work at ${answer.GitHub}.
+  If you have any questions, open an issue or contact me directly at ${answer.email}. You can find more of my work at https://github.com/${answer.GitHub}.
 `;
 }
 
