@@ -1,12 +1,13 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
-        name: 'name',
+        name: 'GitHub',
         message: 'What is your GitHub Username?',
       },
       {
@@ -16,7 +17,7 @@ const questions = [
       },
       {
         type: 'input',
-        name: 'name',
+        name: 'title',
         message: "what is your project's name?",
       },
       {
@@ -24,6 +25,11 @@ const questions = [
         name: 'description',
         message: 'Please write a short description of your project?',
       },
+      {
+        type: 'input',
+        name: 'installation',
+        message: 'What are the steps require to install your project ?',
+      },   
       {
         type: 'input',
         name: 'license',
@@ -38,32 +44,29 @@ const questions = [
         type: 'input',
         name: 'test',
         message: 'What command should be run to run tests?',
-      },   
-      {
-        type: 'input',
-        name: 'repo',
-        message: 'What does the user need to know about using the repo?',
-    },  
+      },     
 ];
 
-
-function writeToFile(filename, data){
-    fs.writeFile("Generate-ReadMe.md", data, (err) => {
-    err ? console.log(err) : console.log('Generating README...')});
-
-    const data =
-    ``
-};
+// TODO: Create a function to write README file
+const writeToFile = content => {
+    return new Promise((resolve, reject) =>{
+        fs.writeFile("./generateREADME.md", content, (err) => {
+        err ? reject(err) : resolve('Generating README...')
+        });
+    }
+)};
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.createPromptModule(questions)
-    .then(function (userInput){
-        console.log(userInput)
-        writeToFile()
-    })
+    inquirer.prompt(questions)
+    .then(function(answer){
+        console.log(answer);
+    var content = generateMarkdown(answer);
+        writeToFile(content)
+    });
 }
 
 // Function call to initialize app
 init();
- 
+
+module.exports = questions;

@@ -1,11 +1,12 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const index = require('../index.js');
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license !== "n/a"){
-    return "![GitHub license](https://img.shields.io/badge/License-"${license}"-blue.svg)"
+  if (license == "mit" || "MIT"){
+    return "[GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)"
   } return "";
 }
 
@@ -24,37 +25,43 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (license !== ""){
+  if (license !== "none"){
     return `\n- [License](#license)\n`;
     } return "";
   }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-  # Project Title
-    <img src="https://img.shields.io/badge/LICENSE-${data.license}-COLOR.svg?logo=LOGO">
+function generateMarkdown(answer) {
+  return `
+  # ${answer.title}
 
-    ## Description
-    ${data.description}
-    ## Table of Contents (Optional)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Contributions](#contributing)
-    - [Tests](#tests)
-    - [Questions](#questions)
+  ## ${renderLicenseBadge(answer.license)} 
 
-    ## Installation
-    ${data.installation}
-    ## Usage
-    ${data.input}
-    ## Contributing
-    ${data.dependecies}
-    ## Tests
-    ${data.tests}
-    ## Questions
-    If you have any questions, open an issue or contact me directly at ${data.email}. You can find more of my work at ${data.gitHub}.
+  ## Description
+  ${answer.description}
+
+  ## Table of Contents (Optional)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributions](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
+  ## Installation
+  ${answer.installation}
+
+  ## Usage
+  Provide instructions and examples for use. Include screenshots as needed.
+
+  ## Contributing
+  ${answer.dependencies}
+
+  ## Tests
+  ${answer.test}
+
+  ## Questions
+  If you have any questions, open an issue or contact me directly at ${answer.email}. You can find more of my work at ${answer.GitHub}.
 `;
 }
 
